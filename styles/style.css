@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-/* Peleta de cores: 
+/* Paleta de cores:
   verde: #49a08d
-  lilás:#5f2c82
+  lilás: #5f2c82
 */
 
 * {
@@ -35,7 +35,8 @@ section#login {
 
   background-color: #ffffff;
   width: 250px;
-  height: 500px;
+  height: auto;
+  min-height: 500px;
   border-radius: 18px;
   box-shadow: 0px 0px 10px #0000008b;
 
@@ -54,4 +55,74 @@ section#login > div#img {
 section#login > div#form {
   display: block;
   padding: 10px;
+}
+
+div#form > h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+div#form > p {
+  font-size: 0.8em;
+}
+
+/* ✅ Inputs genéricos, exceto botões */
+input:not([type="submit"]):not([type="button"]) {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus:not([type="submit"]):not([type="button"]) {
+  border-color: #5f2c82;
+  box-shadow: 0 0 6px rgba(95, 44, 130, 0.3);
+  outline: none;
+}
+
+/* ✅ Botões */
+button,
+input[type="submit"] {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #43a047;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#btn-esqueci {
+  background-color: #e0e0e0;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#btn-esqueci:hover {
+  background-color: #d5d5d5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.botoes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
